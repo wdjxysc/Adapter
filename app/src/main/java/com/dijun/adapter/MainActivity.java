@@ -16,7 +16,24 @@ public class MainActivity extends Activity {
         findViewById(R.id.arrayAdapterBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ArrayListActivity.class);
+                Intent intent = new Intent(MainActivity.this,ArrayAdapterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.arrayAdapter1Btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ArrayAdapter1Activity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        findViewById(R.id.arrayAdapter2Btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ArrayAdapter2Activity.class);
                 startActivity(intent);
             }
         });
@@ -24,7 +41,15 @@ public class MainActivity extends Activity {
         findViewById(R.id.simpleAdapterBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,SimpleListActivity.class);
+                Intent intent = new Intent(MainActivity.this,SimpleAdapterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.baseAdapterBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,BaseAdapterActivity.class);
                 startActivity(intent);
             }
         });

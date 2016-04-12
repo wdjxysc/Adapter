@@ -10,28 +10,29 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayListActivity extends Activity {
-
+/**
+ * 内容简单的 布局可以丰富（只能指定TextView的内容）
+ */
+public class ArrayAdapter1Activity extends Activity {
     ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_array_list);
-
+        setContentView(R.layout.activity_array_adapter1);
 
         listView = (ListView) findViewById(R.id.listView);
 
         final List<String> data = new ArrayList<>();
-        data.add("测试1");
-        data.add("测试2");
-        data.add("测试3");
-        data.add("测试4");
+        data.add("幻刺");
+        data.add("人马");
+        data.add("幽鬼");
+        data.add("火枪");
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,data);
+
+        //此处指定内容layout 和 TextView
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.array_adpter1_item, R.id.itemTextView, data);
 
         listView.setAdapter(arrayAdapter);
-
-
 
         findViewById(R.id.addBtn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,10 +45,11 @@ public class ArrayListActivity extends Activity {
         findViewById(R.id.minusBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(data.size() == 0) return;
+                if (data.size() == 0) return;
                 data.remove(0);
                 arrayAdapter.notifyDataSetChanged();
             }
         });
     }
+
 }
