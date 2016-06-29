@@ -1,4 +1,4 @@
-package com.dijun.adapter;
+package com.dijun.adapter.ui;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.Toast;
+
+import com.dijun.adapter.R;
 
 import java.util.ArrayList;
 

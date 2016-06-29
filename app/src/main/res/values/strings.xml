@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Adapter</string>
+
+    <string name="my_baidu_api_key">ec541b7ac34bd007e9b75a8f78f38f61</string>
 </resources>
